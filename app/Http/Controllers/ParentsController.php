@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Parents;
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -54,7 +53,8 @@ class ParentsController extends Controller
         $user = User::create([
             'name'      => $request->name,
             'email'     => $request->email,
-            'password'  => Hash::make($request->password)
+            'password'  => Hash::make($request->password),
+            'role'      => 'Parent' // Assigning the role here
         ]);
         
         if ($request->hasFile('profile_picture')) {
