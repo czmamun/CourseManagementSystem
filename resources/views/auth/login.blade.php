@@ -36,6 +36,9 @@
                 Sign In
             </button>
         </div>
+        <div class="mt-4">
+            <a href="{{ route('register') }}" class="text-blue-500 hover:text-blue-700">Don't have an account? Sign up</a>
+        </div>
     </form>
 </div>
 
